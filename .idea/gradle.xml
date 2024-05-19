@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Meal Planner (Java)/task" />
+            <option value="$PROJECT_DIR$/Meal Planner (Java)/task/build/classes/java" />
+            <option value="$PROJECT_DIR$/Meal Planner (Java)/task/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/Meal Planner (Java)/task/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/Meal Planner (Java)/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/Meal Planner (Java)/task/build/test-results" />
+            <option value="$PROJECT_DIR$/Meal Planner (Java)/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/Concat positive numbers" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/Creating list" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/How to get an element by the index" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/Output the list's elements" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/The behavior of methods" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Errors in programs/Fix the program" />
+            <option value="$PROJECT_DIR$/Topics/Errors in programs/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/Creating a personalized greeting through string manipulation" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/Find the correct Statement" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/Format-Specifiers" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/Formatting Long Sentences" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/Integer Formatting" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/Job simulation" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/Simple combination" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Box vs GenericBox  A Java Showdown" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Boxes are not just objects" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Generically printing object representations" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Initialize an object of a generic class" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Instance without type argument" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Reusing code with Object" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/What is a type" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/What is wrong" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Correct the program" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Creating instances" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Generic parameter values" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Pastry packing optimization" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Type arguments" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Type arguments - 2" />
+            <option value="$PROJECT_DIR$/Topics/Regexes in programs/Card name validation and identification" />
+            <option value="$PROJECT_DIR$/Topics/Regexes in programs/Check IP address" />
+            <option value="$PROJECT_DIR$/Topics/Regexes in programs/Check the clock time" />
+            <option value="$PROJECT_DIR$/Topics/Regexes in programs/Check the date" />
+            <option value="$PROJECT_DIR$/Topics/Regexes in programs/Finding digit-letter sequences with regex" />
+            <option value="$PROJECT_DIR$/Topics/Regexes in programs/Ignoring spaces" />
+            <option value="$PROJECT_DIR$/Topics/Regexes in programs/Illegal identifiers" />
+            <option value="$PROJECT_DIR$/Topics/Regexes in programs/Safe password" />
+            <option value="$PROJECT_DIR$/Topics/Regexes in programs/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Regexes in programs/Understanding a Regular Expression Pattern" />
+            <option value="$PROJECT_DIR$/Topics/Regexes in programs/Vehicle registration number" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/Comparing sets" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/Output elements" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/Strict superset" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/Symmetric difference" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/The set of programming languages" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/The storage order" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The Set interface/TreeSet storage order" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

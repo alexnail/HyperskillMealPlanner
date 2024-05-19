@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "Java, Scala, Kotlin, Python, JAVA"
+  - text: "Java, Scala, Kotlin, Python"
+  - text: "Java, Scala, Python, JAVA"
+  - text: "Java, Scala, Kotlin, Kotlin, JAVA, Python"
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2098#comment
+status: Solved
+record: -1
+local_check: false

@@ -1,0 +1,12 @@
+type: code
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3750#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sat, 18 May 2024 11:02:19 UTC"
+record: -1
+submission_language: java17

@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: It will return a reference of <b>String</b> type
+  - text: It will return <b>Void</b>
+  - text: It will return a reference of <b>Object</b> type
+  - text: It will not compile
+  - text: An exception occurs after executing this line
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3537#comment
+status: Solved
+record: -1
+local_check: false

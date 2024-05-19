@@ -1,0 +1,11 @@
+# Project exclude paths
+/.gradle/
+/Meal Planner (Java)/task/build/
+/Meal Planner (Java)/task/out/
+/Meal Planner (Java)/task/out/production/classes/
+/Topics/Regexes in programs/Check the date/out/
+/Topics/Regexes in programs/Check the date/out/production/classes/
+/Topics/Regexes in programs/Safe password/out/
+/Topics/Regexes in programs/Safe password/out/production/classes/
+/Topics/Regexes in programs/Vehicle registration number/out/
+/Topics/Regexes in programs/Vehicle registration number/out/production/classes/
