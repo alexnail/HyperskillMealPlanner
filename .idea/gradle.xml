@@ -35,6 +35,7 @@
             <option value="$PROJECT_DIR$/Topics/Formatted output/Theory" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Box vs GenericBox  A Java Showdown" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Boxes are not just objects" />
+            <option value="$PROJECT_DIR$/Topics/Generics and Object/Correct the usage of non-generic class" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Generically printing object representations" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Initialize an object of a generic class" />
             <option value="$PROJECT_DIR$/Topics/Generics and Object/Instance without type argument" />
