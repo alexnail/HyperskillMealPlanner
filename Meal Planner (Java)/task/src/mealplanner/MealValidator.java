@@ -5,6 +5,8 @@ import java.util.List;
 
 public class MealValidator {
     private static final String[] VALID_CATEGORIES = {"breakfast", "lunch", "dinner"};
+    private static final String WRONG_FORMAT_USE_LETTERS_ONLY = "Wrong format. Use letters only!";
+    private static final String VALID_NAME_REGEX = "[A-Za-z\\s]+";
 
     public boolean isValidCategory(String category) {
         if (!Arrays.asList(VALID_CATEGORIES).contains(category)) {
@@ -16,7 +18,7 @@ public class MealValidator {
 
     public boolean isValidName(String name) {
         if (name == null || name.isEmpty() || name.isBlank()
-                || !name.matches("[@A-Za-z ]+")) {
+                || !name.matches(VALID_NAME_REGEX)) {
             System.out.println("Wrong format. Use letters only!");
             return false;
         }
@@ -31,11 +33,31 @@ public class MealValidator {
         return true;
     }
 
-    public boolean areValidIngredients(String ingredientsInput) {
+    /*public boolean areValidIngredients(String ingredientsInput) {
         if (ingredientsInput == null || ingredientsInput.isEmpty() || ingredientsInput.isBlank()
-                || !ingredientsInput.matches("\\b(\\W?[A-Za-z ]+){1}([,A-Za-z ]+)*\\b")) {
+                || !ingredientsInput.matches("^((?!.*,\\s,)[A-Za-z]+\\s*(,\\s*[A-Za-z\\s]+\\s*)*)$,\\s?")) {
             System.out.println("Wrong format. Use letters only!");
             return false;
+        }
+        return true;
+    }*/
+
+    public boolean areValidIngredients(String ingredientsInput) {
+        if (ingredientsInput == null || ingredientsInput.isEmpty() || ingredientsInput.isBlank()
+        || ingredientsInput.trim().endsWith(",")) {
+            System.out.println(WRONG_FORMAT_USE_LETTERS_ONLY);
+            return false;
+        }
+        List<String> split = Arrays.stream(ingredientsInput.split("\\s*,\\s*")).map(String::trim).toList();
+        if (split.stream().anyMatch(s -> s.isEmpty() || s.isBlank())) {
+            System.out.println(WRONG_FORMAT_USE_LETTERS_ONLY);
+            return false;
+        }
+        for (String s : split) {
+            if (!s.matches(VALID_NAME_REGEX)) {
+                System.out.println(WRONG_FORMAT_USE_LETTERS_ONLY);
+                return false;
+            }
         }
         return true;
     }

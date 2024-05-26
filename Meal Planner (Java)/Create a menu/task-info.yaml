@@ -34,24 +34,8 @@ files:
     visible: true
     learner_created: true
 feedback_link: https://hyperskill.org/learn/step/25572#comment
-status: Failed
+status: Solved
 feedback:
-  message: "Wrong answer in test #1\n\nYour output should contain &quot;Wrong format.\
-    \ Use letters only!&quot;\n\nPlease find below the output of your program during\
-    \ this failed test.\nNote that the &#39;&gt;&#39; character indicates the beginning\
-    \ of the input line.\n\n---\n\nWhat would you like to do (add, show, exit)?\n\
-    &gt; show\nNo meals saved. Add a meal first.\nWhat would you like to do (add,\
-    \ show, exit)?\n&gt; new meal\nWhat would you like to do (add, show, exit)?\n\
-    &gt; meal\nWhat would you like to do (add, show, exit)?\n&gt; \nWhat would you\
-    \ like to do (add, show, exit)?\n&gt;  \t\nWhat would you like to do (add, show,\
-    \ exit)?\n&gt; add\nWhich meal do you want to add (breakfast, lunch, dinner)?\n\
-    &gt; &gt; dessert\nWrong meal category! Choose from: breakfast, lunch, dinner.\n\
-    &gt; &gt; nothing\nWrong meal category! Choose from: breakfast, lunch, dinner.\n\
-    &gt; &gt; meal1\nWrong meal category! Choose from: breakfast, lunch, dinner.\n\
-    &gt; &gt; meal@\nWrong meal category! Choose from: breakfast, lunch, dinner.\n\
-    &gt; &gt; \nWrong meal category! Choose from: breakfast, lunch, dinner.\n&gt;\
-    \ &gt;  \t\nWrong meal category! Choose from: breakfast, lunch, dinner.\n&gt;\
-    \ &gt; lunch\nInput the meal&#39;s name:\n&gt; &gt; burger1\nWrong format. Use\
-    \ letters only!\n&gt; &gt; sushi@\nInput the ingredients:\n&gt;"
-  time: "Wed, 22 May 2024 18:41:53 UTC"
+  message: Congratulations!
+  time: "Sun, 26 May 2024 17:00:47 UTC"
 record: -1

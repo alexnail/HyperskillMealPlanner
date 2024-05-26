@@ -23,7 +23,7 @@ public class AddCommand implements Command{
             mealCategory = scanner.nextLine();
         } while (!validator.isValidCategory(mealCategory));
 
-        // 2. ask abouut meal name
+        // 2. ask about meal name
         System.out.println("Input the meal's name:");
         String mealName;
         do {
@@ -38,7 +38,6 @@ public class AddCommand implements Command{
         do {
             System.out.print("> ");
             ingredientsInput = scanner.nextLine();
-            //ingredients = Arrays.stream(ingredientsInput.split("\\s*,\\s*")).map(String::trim).toList();
         } while (!validator.areValidIngredients(ingredientsInput));
         ingredients = Arrays.stream(ingredientsInput.split("\\s*,\\s*")).map(String::trim).toList();
 
@@ -48,13 +47,6 @@ public class AddCommand implements Command{
                 .build();
         MealStorage.get().add(meal);
 
-        // 4. print all the info
-        /*System.out.println("Category: " + meal.getCategory());
-        System.out.println("Name: " + meal.getName());
-        System.out.println("Ingredients:");
-        for (String ingredient: meal.getIngredients()) {
-            System.out.println(ingredient);
-        }*/
         System.out.println("The meal has been added!");
         return false;
     }
