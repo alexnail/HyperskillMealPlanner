@@ -45,7 +45,7 @@ public class AddCommand implements Command{
                 .withName(mealName)
                 .withIngredients(ingredients)
                 .build();
-        MealStorage.get().add(meal);
+        MealStorage.save(meal);
 
         System.out.println("The meal has been added!");
         return false;

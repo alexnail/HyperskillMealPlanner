@@ -5,10 +5,18 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../Meal Planner (Java)/task/src">
       <sourceFolder url="file://$MODULE_DIR$/../../../../Meal Planner (Java)/task/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../Meal Planner (Java)/task/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.postgresql:postgresql:42.2.27" level="project" />
+    <orderEntry type="library" name="Gradle: org.flywaydb:flyway-database-postgresql:10.4.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.flywaydb:flyway-core:10.4.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-toml:2.15.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.10.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.15.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.15.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.15.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.checkerframework:checker-qual:3.5.0" level="project" />
   </component>
 </module>
