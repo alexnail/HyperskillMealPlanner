@@ -25,6 +25,10 @@
             <option value="$PROJECT_DIR$/Topics/ArrayList/Theory" />
             <option value="$PROJECT_DIR$/Topics/Data Access Object for JDBC/DAO pattern in use" />
             <option value="$PROJECT_DIR$/Topics/Data Access Object for JDBC/DAO pattern interface declaration" />
+            <option value="$PROJECT_DIR$/Topics/Data Access Object for JDBC/DAO pattern methods" />
+            <option value="$PROJECT_DIR$/Topics/Data Access Object for JDBC/DAO pattern usage" />
+            <option value="$PROJECT_DIR$/Topics/Data Access Object for JDBC/Data stores usage" />
+            <option value="$PROJECT_DIR$/Topics/Data Access Object for JDBC/List-based implementation" />
             <option value="$PROJECT_DIR$/Topics/Data Access Object for JDBC/Map-based implementation" />
             <option value="$PROJECT_DIR$/Topics/Data Access Object for JDBC/Theory" />
             <option value="$PROJECT_DIR$/Topics/Errors in programs/Fix the program" />

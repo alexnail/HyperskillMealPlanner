@@ -9,6 +9,30 @@ files:
   - name: test/MealPlannerTests.java
     visible: false
     learner_created: false
+  - name: src/mealplanner/Meal.java
+    visible: true
+    learner_created: true
+  - name: src/mealplanner/CommandPrompt.java
+    visible: true
+    learner_created: true
+  - name: src/mealplanner/Command.java
+    visible: true
+    learner_created: true
+  - name: src/mealplanner/ShowCommand.java
+    visible: true
+    learner_created: true
+  - name: src/mealplanner/ExitCommand.java
+    visible: true
+    learner_created: true
+  - name: src/mealplanner/MealStorage.java
+    visible: true
+    learner_created: true
+  - name: src/mealplanner/MealValidator.java
+    visible: true
+    learner_created: true
+  - name: src/mealplanner/AddCommand.java
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/25575#comment
 status: Unchecked
 record: -1
