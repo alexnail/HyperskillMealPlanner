@@ -3,9 +3,14 @@ package mealplanner;
 import java.util.List;
 
 public class Meal {
+    private Integer id;
     private String category;
     private String name;
     private List<String> ingredients;
+
+    public Integer getId() {
+        return id;
+    }
 
     public String getCategory() {
         return category;
@@ -21,9 +26,15 @@ public class Meal {
 
     public static class Builder {
 
+        private Integer id;
         private String category;
         private String name;
         private List<String> ingredients;
+
+        public Builder withId(Integer id) {
+            this.id = id;
+            return this;
+        }
 
         public Builder withCategory(String category) {
             this.category = category;
@@ -42,6 +53,7 @@ public class Meal {
 
         public Meal build() {
             Meal meal = new Meal();
+            meal.id = id;
             meal.category = category;
             meal.name = name;
             meal.ingredients = ingredients;

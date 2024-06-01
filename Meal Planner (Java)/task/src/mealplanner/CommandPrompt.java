@@ -10,10 +10,11 @@ public class CommandPrompt {
     }
 
     public Command getCommand() {
-        System.out.println("What would you like to do (add, show, exit)?");
+        System.out.println("What would you like to do (add, show, plan, exit)?");
         return switch (scanner.nextLine()) {
             case "add" -> new AddCommand(scanner);
             case "show" -> new ShowCommand(scanner);
+            case "plan" -> new PlanCommand(scanner);
             case "exit" -> new ExitCommand();
             default -> () -> false;
         };

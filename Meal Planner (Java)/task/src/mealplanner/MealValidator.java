@@ -25,23 +25,6 @@ public class MealValidator {
         return true;
     }
 
-    public boolean areValidIngredients(List<String> ingredients) {
-        for (String ingredient : ingredients) {
-            if (!isValidName(ingredient))
-                return false;
-        }
-        return true;
-    }
-
-    /*public boolean areValidIngredients(String ingredientsInput) {
-        if (ingredientsInput == null || ingredientsInput.isEmpty() || ingredientsInput.isBlank()
-                || !ingredientsInput.matches("^((?!.*,\\s,)[A-Za-z]+\\s*(,\\s*[A-Za-z\\s]+\\s*)*)$,\\s?")) {
-            System.out.println("Wrong format. Use letters only!");
-            return false;
-        }
-        return true;
-    }*/
-
     public boolean areValidIngredients(String ingredientsInput) {
         if (ingredientsInput == null || ingredientsInput.isEmpty() || ingredientsInput.isBlank()
         || ingredientsInput.trim().endsWith(",")) {

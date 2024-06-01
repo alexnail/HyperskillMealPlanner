@@ -33,6 +33,15 @@ files:
   - name: src/mealplanner/AddCommand.java
     visible: true
     learner_created: true
+  - name: src/mealplanner/PlanCommand.java
+    visible: true
+    learner_created: true
+  - name: src/mealplanner/PlanEntry.java
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/25575#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 01 Jun 2024 21:52:11 UTC"
 record: -1

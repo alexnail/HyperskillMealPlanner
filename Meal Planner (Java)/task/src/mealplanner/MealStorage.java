@@ -11,17 +11,21 @@ public class MealStorage {
     private static final String INSERT_MEAL_SQL = "INSERT INTO meals(category, meal) VALUES(?, ?)";
     private static final String SELECT_MEAL_ID_SQL = "SELECT meal_id FROM meals WHERE category=? and meal=?";
     private static final String INSERT_INGREDIENT_SQL = "INSERT INTO ingredients(meal_id, ingredient) VALUES(?, ?)";
-    public static final String SELECT_ALL_MEALS_SQL = """
+    private static final String SELECT_ALL_MEALS_SQL = """
         SELECT m.meal_id, m.category, m.meal, i.ingredient_id, i.ingredient
         FROM meals m JOIN ingredients i ON m.meal_id = i.meal_id
         ORDER BY m.meal_id, i.ingredient_id
     """;
-    public static final String SELECT_MEALS_IN_CATEGORY_SQL = """
+    private static final String SELECT_MEALS_IN_CATEGORY_SQL = """
         SELECT m.meal_id, m.category, m.meal, i.ingredient_id, i.ingredient
         FROM meals m JOIN ingredients i ON m.meal_id = i.meal_id
         WHERE m.category=?
         ORDER BY m.meal_id, i.ingredient_id
     """;
+    private static final String TRUNCATE_PLAN_SQL = "TRUNCATE TABLE plan";
+    public static final String PLAN_INSERT_SQL = """
+                INSERT INTO plan (weekday, category, meal_id) VALUES (?, ?, ?)
+            """;
 
     private static Connection connection;
 
@@ -89,6 +93,7 @@ public class MealStorage {
                 .map(v -> {
                             MealIngredientRow first = v.get(0);
                             Meal.Builder builder = new Meal.Builder()
+                                    .withId(first.mealId())
                                     .withCategory(first.category())
                                     .withName(first.meal());
                             builder.withIngredients(v.stream()
@@ -114,6 +119,27 @@ public class MealStorage {
 
     public static List<Meal> getMeals(String category) {
         return getList(SELECT_MEALS_IN_CATEGORY_SQL, category);
+    }
+
+    public static void deleteOldPlan() {
+        try(PreparedStatement ps = connection.prepareStatement(TRUNCATE_PLAN_SQL)) {
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void savePlan(List<PlanEntry> plan) {
+        try(PreparedStatement ps = connection.prepareStatement(PLAN_INSERT_SQL)) {
+            for (PlanEntry planEntry: plan) {
+                ps.setString(1, planEntry.weekday());
+                ps.setString(2, planEntry.category());
+                ps.setInt(3, planEntry.meal().getId());
+                ps.executeUpdate();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
 

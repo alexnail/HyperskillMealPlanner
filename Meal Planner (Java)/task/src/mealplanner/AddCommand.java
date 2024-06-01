@@ -19,7 +19,7 @@ public class AddCommand implements Command{
         System.out.println("Which meal do you want to add (breakfast, lunch, dinner)?");
         String mealCategory;
         do {
-            System.out.print("> ");
+            System.out.print(INPUT_PROMPT);
             mealCategory = scanner.nextLine();
         } while (!validator.isValidCategory(mealCategory));
 
@@ -27,7 +27,7 @@ public class AddCommand implements Command{
         System.out.println("Input the meal's name:");
         String mealName;
         do {
-            System.out.print("> ");
+            System.out.print(INPUT_PROMPT);
             mealName = scanner.nextLine();
         } while (!validator.isValidName(mealName));
 
@@ -36,7 +36,7 @@ public class AddCommand implements Command{
         List<String> ingredients;
         String ingredientsInput;
         do {
-            System.out.print("> ");
+            System.out.print(INPUT_PROMPT);
             ingredientsInput = scanner.nextLine();
         } while (!validator.areValidIngredients(ingredientsInput));
         ingredients = Arrays.stream(ingredientsInput.split("\\s*,\\s*")).map(String::trim).toList();
