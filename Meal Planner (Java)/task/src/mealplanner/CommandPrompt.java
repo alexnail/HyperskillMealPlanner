@@ -13,7 +13,7 @@ public class CommandPrompt {
         System.out.println("What would you like to do (add, show, exit)?");
         return switch (scanner.nextLine()) {
             case "add" -> new AddCommand(scanner);
-            case "show" -> new ShowCommand();
+            case "show" -> new ShowCommand(scanner);
             case "exit" -> new ExitCommand();
             default -> () -> false;
         };

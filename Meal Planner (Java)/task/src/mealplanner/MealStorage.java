@@ -16,6 +16,13 @@ public class MealStorage {
         FROM meals m JOIN ingredients i ON m.meal_id = i.meal_id
         ORDER BY m.meal_id, i.ingredient_id
     """;
+    public static final String SELECT_MEALS_IN_CATEGORY_SQL = """
+        SELECT m.meal_id, m.category, m.meal, i.ingredient_id, i.ingredient
+        FROM meals m JOIN ingredients i ON m.meal_id = i.meal_id
+        WHERE m.category=?
+        ORDER BY m.meal_id, i.ingredient_id
+    """;
+
     private static Connection connection;
 
     public static void setConnection(Connection connection) {
@@ -56,8 +63,13 @@ public class MealStorage {
     }
 
     public static List<Meal> getAllMeals() {
+        return getList(SELECT_ALL_MEALS_SQL);
+    }
+
+    private static List<Meal> getList(String sql, Object... parameters) {
         List<MealIngredientRow> rows = new LinkedList<>();
-        try (PreparedStatement ps = connection.prepareStatement(SELECT_ALL_MEALS_SQL)){
+        try (PreparedStatement ps = connection.prepareStatement(sql)){
+            setParameters(parameters, ps);
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {
                 int mealId = resultSet.getInt("meal_id");
@@ -85,6 +97,23 @@ public class MealStorage {
                             return builder.build();
                         }
                 ).toList();
+    }
+
+    private static void setParameters(Object[] parameters, PreparedStatement ps) throws SQLException {
+        for (int i = 0; i < parameters.length; i++) {
+            Object parameter = parameters[i];
+            if (parameter instanceof String strObject) {
+                ps.setString(i + 1, strObject);
+            } else if (parameter instanceof Integer intObject) {
+                ps.setInt(i + 1, intObject);
+            } else {
+                System.out.println("Unknown parameter type: " + parameter.getClass().getName());
+            }
+        }
+    }
+
+    public static List<Meal> getMeals(String category) {
+        return getList(SELECT_MEALS_IN_CATEGORY_SQL, category);
     }
 }
 
