@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: The pattern declares an interface and all implementation classes
+  - text: The pattern declares a static utiliy class
+  - text: The pattern declares an interface and exactly one implementation class
+  - text: "The pattern doesn't declare any interfaces, only classes"
+  - text: "The pattern declares an interface, which can be implemented by many classes"
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/20191#comment
+status: Solved
+record: -1
+local_check: false

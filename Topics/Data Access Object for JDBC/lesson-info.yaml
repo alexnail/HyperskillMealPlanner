@@ -3,3 +3,7 @@ content:
   - DAO pattern interface declaration
   - DAO pattern in use
   - Map-based implementation
+  - DAO pattern usage
+  - DAO pattern methods
+  - Data stores usage
+  - List-based implementation
