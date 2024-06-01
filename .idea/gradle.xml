@@ -23,6 +23,10 @@
             <option value="$PROJECT_DIR$/Topics/ArrayList/Output the list's elements" />
             <option value="$PROJECT_DIR$/Topics/ArrayList/The behavior of methods" />
             <option value="$PROJECT_DIR$/Topics/ArrayList/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Data Access Object for JDBC/DAO pattern in use" />
+            <option value="$PROJECT_DIR$/Topics/Data Access Object for JDBC/DAO pattern interface declaration" />
+            <option value="$PROJECT_DIR$/Topics/Data Access Object for JDBC/Map-based implementation" />
+            <option value="$PROJECT_DIR$/Topics/Data Access Object for JDBC/Theory" />
             <option value="$PROJECT_DIR$/Topics/Errors in programs/Fix the program" />
             <option value="$PROJECT_DIR$/Topics/Errors in programs/Theory" />
             <option value="$PROJECT_DIR$/Topics/Formatted output/Creating a personalized greeting through string manipulation" />

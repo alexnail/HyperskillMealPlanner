@@ -1,3 +1,5 @@
 content:
   - Theory
   - DAO pattern interface declaration
+  - DAO pattern in use
+  - Map-based implementation
