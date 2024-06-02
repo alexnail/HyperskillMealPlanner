@@ -1,6 +1,10 @@
 package mealplanner;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -23,9 +27,8 @@ public class MealStorage {
         ORDER BY m.meal_id, i.ingredient_id
     """;
     private static final String TRUNCATE_PLAN_SQL = "TRUNCATE TABLE plan";
-    public static final String PLAN_INSERT_SQL = """
-                INSERT INTO plan (weekday, category, meal_id) VALUES (?, ?, ?)
-            """;
+    private static final String INSERT_PLAN_SQL = "INSERT INTO plan (weekday, category, meal_id) VALUES (?, ?, ?)";
+    private static final String SELECT_PLAN_SQL = "SELECT p.weekday, p.category,p.meal_id FROM plan p";
 
     private static Connection connection;
 
@@ -130,13 +133,32 @@ public class MealStorage {
     }
 
     public static void savePlan(List<PlanEntry> plan) {
-        try(PreparedStatement ps = connection.prepareStatement(PLAN_INSERT_SQL)) {
+        try(PreparedStatement ps = connection.prepareStatement(INSERT_PLAN_SQL)) {
             for (PlanEntry planEntry: plan) {
                 ps.setString(1, planEntry.weekday());
                 ps.setString(2, planEntry.category());
                 ps.setInt(3, planEntry.meal().getId());
                 ps.executeUpdate();
             }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static List<PlanEntry> getPlan() {
+        List<PlanEntry> rows = new ArrayList<>();
+
+        Map<Integer, Meal> idToMeal = getAllMeals().stream().collect(Collectors.toMap(Meal::getId, m -> m));
+
+        try(PreparedStatement ps = connection.prepareStatement(SELECT_PLAN_SQL)) {
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                String weekday = rs.getString("weekday");
+                String category = rs.getString("category");
+                int mealId = rs.getInt("meal_id");
+                rows.add(new PlanEntry(weekday, category, idToMeal.get(mealId)));
+            }
+            return rows;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
